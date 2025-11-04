@@ -80,6 +80,24 @@ document.getElementById('submitButton').addEventListener('click', function() {
         result = 'Ciencias Tecnológicas';
     }
 
+    if (['personas', 'datos', 'hechos', 'comunidades'].includes(objectType) &&
+        ['enseñar', 'investigar', 'planificar'].includes(taskType) &&
+        ['escuelas', 'equipos de orientación escolar'].includes(fieldType)) {
+        result = "Ciencias de la Educación"
+    }
+
+    if (['personas', 'datos', 'tecnología'].includes(objectType) &&
+        ['comunicar', 'analizar', 'innovar'].includes(taskType) && 
+        ['televisión', 'agencias publicitarias', 'teatro', 'cine', 'empresas', 'espacios de media digital'].includes(fieldType)) {
+        result = "Estudios Mediales"
+    }
+
+    if (['fenómenos', 'ecosistemas', 'tecnología', 'comunidades'].includes(objectType) &&
+        ['observar', 'analizar', 'cuidar', 'investigar', 'aplicar', 'optimizar', 'acompañar', 'capacitar'].includes(taskType) &&
+        ['campo', 'laboratorio', 'lugares rurales', 'granja'].includes(fieldType)) {
+        result = "Agronomía y Sistemas Naturales"
+    }
+
     const resultElement = document.getElementById('result');
     if (result) {
         resultElement.textContent = `Tu campo de estudio recomendado es: ${result}`;
